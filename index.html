@@ -311,8 +311,55 @@
     </div>
   </header>
 
+  <!--
+
   <!-- ==========================================================================
-       3. PARENTS' BLESSINGS & FAMILY INVITATION SECTION
+       3. INTERACTIVE HTML5 CANVAS 'SCRATCH TO REVEAL' SAVE-THE-DATE CARD
+       ========================================================================== -->
+  <section id="scratch-save-the-date" class="py-16 sm:py-24 px-5">
+    <div class="max-w-xl mx-auto text-center fade-up">
+      <p class="font-cinzel text-[11px] uppercase tracking-[0.32em] text-gold-antique font-semibold mb-2">
+        Save The Date
+      </p>
+      <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-charcoal mb-2">
+        Scratch to Reveal
+      </h2>
+      <p class="text-xs sm:text-sm text-muted-ink mb-8">
+        Rub the rose-gold foil card with your finger or cursor to unveil our Nikah date
+      </p>
+
+      <div id="scratch-card-wrapper" class="relative w-full h-56 sm:h-64 rounded-3xl overflow-hidden border-2 border-[#B68D4C]/55 shadow-[0_20px_50px_rgba(110,51,65,0.12)] bg-white select-none">
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-white via-[#FDF8F7] to-[#F8ECEA]">
+          <div class="absolute inset-2 border border-[#B68D4C]/30 rounded-2xl pointer-events-none"></div>
+          <span class="font-cinzel text-[10px] uppercase tracking-[0.28em] text-rose-deep font-semibold mb-2">
+            We Are Getting Married
+          </span>
+          <p class="font-editorial font-bold text-2xl sm:text-3xl text-charcoal leading-snug">
+            Sunday · 20 December 2026
+          </p>
+          <p class="font-cinzel text-xs sm:text-sm uppercase tracking-[0.22em] text-gold-antique font-semibold mt-1.5">
+            11:00 AM Onwards
+          </p>
+          <div class="h-px w-16 bg-[#B68D4C]/40 my-2.5"></div>
+          <p class="font-editorial italic text-lg sm:text-xl text-rose-deep font-semibold">
+            L. K. S Mahal · Trichy - 1
+          </p>
+        </div>
+
+        <canvas id="scratch-canvas" class="absolute inset-0 w-full h-full z-10 transition-opacity duration-700"></canvas>
+      </div>
+
+      <div class="mt-5">
+        <button id="reveal-all-btn" type="button"
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#B68D4C]/50 bg-white/85 hover:bg-[#F8ECEA] font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.22em] text-rose-deep font-semibold transition cursor-pointer">
+          <i class="fa-solid fa-wand-magic-sparkles text-gold-antique"></i>
+          <span>Reveal All</span>
+        </button>
+      </div>
+    </div>
+  </section>
+ ==========================================================================
+       4. PARENTS' BLESSINGS & FAMILY INVITATION SECTION
        ========================================================================== -->
   <section id="blessings" class="bg-silk islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6 border-b border-rose-gold/35">
     <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
@@ -370,7 +417,7 @@
   </section>
 
   <!-- ==========================================================================
-       4. SINGLE CENTERED MARRIAGE / NIKAH CEREMONY CARD
+       5. SINGLE CENTERED MARRIAGE / NIKAH CEREMONY CARD
        ========================================================================== -->
   <section id="events" class="bg-royal islamic-pattern-overlay text-royal-light py-16 sm:py-24 px-4 sm:px-6">
     <div class="max-w-4xl mx-auto reveal-on-scroll">
@@ -457,7 +504,7 @@
   </section>
 
   <!-- ==========================================================================
-       5. VENUE & DIRECTIONS SECTION
+       6. VENUE & DIRECTIONS SECTION
        ========================================================================== -->
   <section id="venue" class="bg-silk islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6 border-b border-rose-gold/35">
     <div class="max-w-4xl mx-auto reveal-on-scroll">
@@ -516,7 +563,7 @@
   </section>
 
   <!-- ==========================================================================
-       6. INTERACTIVE RSVP & LIVE DUA / BLESSINGS WALL
+       7. INTERACTIVE RSVP & LIVE DUA / BLESSINGS WALL
        ========================================================================== -->
   <section id="rsvp" class="bg-silk-alt islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start reveal-on-scroll">
@@ -633,7 +680,7 @@
   </section>
 
   <!-- ==========================================================================
-       7. CLOSING FOOTER
+       8. CLOSING FOOTER
        ========================================================================== -->
   <footer class="bg-royal islamic-pattern-overlay text-royal-light py-14 px-4 text-center border-t border-rose-gold/45">
     <div class="max-w-xl mx-auto">
