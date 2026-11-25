@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaheed Hussain &amp; Azra — Royal Nikah Invitation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel, Plus Jakarta Sans, Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       DUSTY ROSE & CHAMPAGNE GOLD ROYAL DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-primary: #3D1622;          /* Deep Dusty Rose Velvet */
+      --bg-secondary: #521E2E;        /* Rich Dusty Rose Card Surface */
+      --bg-tertiary: #6B293D;         /* Warm Plum-Rose Highlight */
+      --bg-ivory: #FDF7F8;            /* Soft Blush Ivory Parchment */
+      --bg-ivory-alt: #F7EAEB;        /* Soft Rose-Silk Surface */
+      --text-on-dark: #FDF7F8;
+      --text-on-light: #2E111B;
+      --text-muted-light: #6E4754;
+      --accent-rose-gold: #D9A79C;    /* Metallic Rose Gold */
+      --accent-champagne: #F3D9D0;    /* Soft Champagne Blush */
+      --accent-deep-rose-gold: #B87D70;
+      --border-rose-gold: rgba(217, 167, 156, 0.48);
+      --rose-gold-gradient: linear-gradient(135deg, #B87D70 0%, #F3D9D0 35%, #D9A79C 65%, #E8C5B8 100%);
+    }
+
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-serif-luxury { font-family: 'Cormorant Garamond', serif; }
+    .font-sans-clean { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-arabic { font-family: 'Amiri', serif; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-ivory);
+      color: var(--text-on-light);
+      overflow-x: hidden;
+    }
+
+    .bg-royal { background-color: var(--bg-primary); }
+    .bg-royal-card { background-color: var(--bg-secondary); }
+    .bg-royal-accent { background-color: var(--bg-tertiary); }
+    .bg-silk { background-color: var(--bg-ivory); }
+    .bg-silk-alt { background-color: var(--bg-ivory-alt); }
+    .text-royal-light { color: var(--text-on-dark); }
+    .text-royal-dark { color: var(--text-on-light); }
+    .text-muted-luxury { color: var(--text-muted-light); }
+    .text-rose-gold { color: var(--accent-rose-gold); }
+    .text-champagne { color: var(--accent-champagne); }
+    .text-rose-deep { color: var(--accent-deep-rose-gold); }
+    .border-rose-gold { border-color: var(--border-rose-gold); }
+
+    /* Metallic Rose-Gold & Champagne Foil Shimmer */
+    .rose-gold-foil-text {
+      background: var(--rose-gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: shimmerFoil 6s linear infinite;
+    }
+
+    @keyframes shimmerFoil {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .rose-gold-foil-btn {
+      background: var(--rose-gold-gradient);
+      color: #2B0E17;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(184, 125, 112, 0.32);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .rose-gold-foil-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(184, 125, 112, 0.48);
+    }
+
+    /* Islamic Geometric SVG Background Patterns (Rose-Gold / Champagne Tinted) */
+    .islamic-pattern-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23E8C5B8' stroke-width='0.75' stroke-opacity='0.15'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Cpath d='M12 12L68 68M68 12L12 68' stroke-opacity='0.08'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .islamic-pattern-light {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23B87D70' stroke-width='0.7' stroke-opacity='0.11'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Mughal Arch Frame */
+    .mughal-arch {
+      border-radius: 220px 220px 20px 20px;
+    }
+
+    /* Floating Champagne Dust Canvas */
+    #champagne-dust-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* Royal Curtain & Wax Seal Overlay */
+    #envelope-overlay {
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.9s ease;
+    }
+    .curtain-left, .curtain-right {
+      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    #envelope-overlay.opened .curtain-left {
+      transform: translateX(-100%);
+    }
+    #envelope-overlay.opened .curtain-right {
+      transform: translateX(100%);
+    }
+    #envelope-overlay.opened .wax-seal-container {
+      opacity: 0;
+      transform: scale(1.22);
+      pointer-events: none;
+    }
+
+    @keyframes pulseSeal {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(217, 167, 156, 0.6); }
+      50% { box-shadow: 0 0 0 18px rgba(217, 167, 156, 0); }
+    }
+    .wax-seal-btn {
+      animation: pulseSeal 2.8s infinite;
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-rose-gold); border-radius: 9999px; }
+  </style>
+</head>
+<body class="antialiased selection:bg-rose-200 selection:text-rose-950">
+
+  <!-- Ambient Floating Champagne & Rose-Gold Dust Particles -->
+  <canvas id="champagne-dust-canvas"></canvas>
+
+  <!-- Toast Notification Banner -->
+  <div id="toast-notification" class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-4">
+    <div class="bg-royal border border-rose-gold text-royal-light px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
+      <i class="fa-solid fa-sparkles text-rose-gold"></i>
+      <span id="toast-message" class="text-xs sm:text-sm font-medium tracking-wide">Action completed</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. FULL-SCREEN DUSTY ROSE CURTAIN & ROSE-GOLD WAX SEAL REVEAL
+       ========================================================================== -->
+  <div id="envelope-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
+    <div class="curtain-left absolute inset-y-0 left-0 w-1/2 bg-royal islamic-pattern-overlay border-r border-rose-gold/60 shadow-2xl"></div>
+    <div class="curtain-right absolute inset-y-0 right-0 w-1/2 bg-royal islamic-pattern-overlay border-l border-rose-gold/60 shadow-2xl"></div>
+
+    <div class="wax-seal-container relative z-10 flex flex-col items-center text-center px-6 transition-all duration-700">
+      <p class="font-arabic text-2xl sm:text-3xl text-champagne mb-3 tracking-wide">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+      <p class="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.35em] text-royal-light/90 mb-6">
+        You Are Cordially Invited To The Nikah Of
+      </p>
+
+      <button id="open-invite-btn" aria-label="Tap to Open Invitation"
+        class="wax-seal-btn group relative w-36 h-36 sm:w-40 sm:h-40 rounded-full rose-gold-foil-btn flex flex-col items-center justify-center border-4 border-rose-100/80 cursor-pointer focus:outline-none">
+        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full border border-rose-950/30 flex flex-col items-center justify-center px-2">
+          <span class="font-cinzel text-2xl sm:text-3xl font-bold tracking-widest text-rose-950">S &amp; A</span>
+          <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] text-rose-950/85 mt-1 font-semibold leading-tight">
+            Tap to Open Invitation
+          </span>
+        </div>
+      </button>
+
+      <h2 class="font-serif-luxury italic text-3xl sm:text-4xl text-champagne mt-7">
+        Shaheed Hussain &amp; Azra
+      </h2>
+      <p class="font-cinzel text-xs tracking-[0.28em] text-royal-light/85 mt-2 uppercase">
+        Sunday, 20th December 2026 • Trichy
+      </p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY NAVIGATION BAR (MONOGRAM & SOUND TOGGLE ONLY)
+       ========================================================================== -->
+  <nav class="sticky top-0 z-40 bg-royal/95 backdrop-blur-md border-b border-rose-gold/35 text-royal-light">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <span class="w-9 h-9 rounded-full border border-rose-gold flex items-center justify-center font-cinzel text-xs font-semibold text-champagne group-hover:bg-rose-300/10 transition">
+          S &amp; A
+        </span>
+        <span class="font-serif-luxury italic text-xl tracking-wide text-champagne hidden sm:inline">
+          Shaheed Hussain &amp; Azra
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-xs font-cinzel uppercase tracking-[0.2em]">
+        <a href="#blessings" class="hover:text-rose-gold transition">Blessings</a>
+        <a href="#events" class="hover:text-rose-gold transition">Nikah</a>
+        <a href="#venue" class="hover:text-rose-gold transition">Venue</a>
+        <a href="#rsvp" class="hover:text-rose-gold transition">RSVP</a>
+        <a href="#wishes" class="hover:text-rose-gold transition">Dua Wall</a>
+      </div>
+
+      <div class="flex items-center">
+        <button id="ambient-music-btn" aria-label="Toggle Ambient Royal Chimes" title="Toggle Ambient Royal Chimes"
+          class="w-10 h-10 rounded-full border border-rose-gold/65 flex items-center justify-center text-champagne hover:bg-rose-300/10 transition cursor-pointer">
+          <i id="music-icon" class="fa-solid fa-volume-xmark text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       2. MUGHAL ARCH HERO SECTION & LIVE COUNTDOWN
+       ========================================================================== -->
+  <header id="hero" class="relative bg-royal islamic-pattern-overlay text-royal-light pt-12 pb-20 sm:pt-16 sm:pb-28 px-4 sm:px-6 overflow-hidden">
+    <div class="max-w-3xl mx-auto">
+      <div class="mughal-arch border border-rose-gold/65 bg-royal-card/80 backdrop-blur-sm px-6 py-14 sm:px-14 sm:py-20 text-center shadow-[0_25px_70px_rgba(30,8,15,0.5)] relative">
+        <!-- Inner Delicate Rose-Gold Trim -->
+        <div class="mughal-arch absolute inset-2.5 border border-rose-gold/30 pointer-events-none"></div>
+
+        <!-- Bismillah Calligraphy -->
+        <p class="font-arabic text-3xl sm:text-4xl text-champagne mb-2">
+          بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+        </p>
+        <p class="text-[11px] sm:text-xs font-cinzel uppercase tracking-[0.28em] text-royal-light/80 mb-8">
+          In The Name Of Allah, The Most Gracious, The Most Merciful
+        </p>
+
+        <!-- Quranic Verse -->
+        <blockquote class="max-w-lg mx-auto mb-9">
+          <p class="font-serif-luxury italic text-lg sm:text-xl text-royal-light/95 leading-relaxed">
+            “And among His signs is that He created for you spouses from among yourselves so that you may find tranquility in them, and He placed between you affection and mercy.”
+          </p>
+          <footer class="font-cinzel text-[10px] uppercase tracking-[0.25em] text-rose-gold mt-2">
+            — Surah Ar-Rum (30:21)
+          </footer>
+        </blockquote>
+
+        <!-- Divider Ornament -->
+        <div class="flex items-center justify-center gap-3 mb-8">
+          <span class="h-px w-14 bg-gradient-to-r from-transparent to-rose-300/65"></span>
+          <i class="fa-solid fa-star-and-crescent text-rose-gold text-sm"></i>
+          <span class="h-px w-14 bg-gradient-to-l from-transparent to-rose-300/65"></span>
+        </div>
+
+        <!-- Couple Names -->
+        <p class="font-cinzel text-xs uppercase tracking-[0.32em] text-champagne/90 mb-3">
+          The Sacred Nikah Union Of
+        </p>
+        <h1 class="font-serif-luxury font-semibold text-4xl sm:text-6xl md:text-7xl rose-gold-foil-text leading-tight tracking-wide">
+          Shaheed Hussain
+          <span class="block font-serif-luxury italic text-3xl sm:text-4xl my-1 text-champagne">&amp;</span>
+          Azra
+        </h1>
+
+        <!-- Date & Location Badge -->
+        <div class="mt-8 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 px-6 py-3 rounded-full border border-rose-gold/55 bg-royal/85">
+          <span class="font-cinzel text-xs sm:text-sm tracking-[0.2em] text-champagne font-semibold uppercase">
+            Sunday, 20th December 2026
+          </span>
+          <span class="hidden sm:inline text-rose-gold">•</span>
+          <span class="text-xs tracking-[0.18em] text-royal-light/90 uppercase">
+            11:00 AM Onwards • Trichy
+          </span>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="mt-10 pt-8 border-t border-rose-gold/30">
+          <p class="font-cinzel text-[10px] uppercase tracking-[0.3em] text-rose-gold mb-5">
+            Counting Down To The Blessed Moment
+          </p>
+          <div class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto">
+            <div class="bg-royal/90 border border-rose-gold/45 rounded-2xl py-3.5 px-2 shadow-inner">
+              <div id="cd-days" class="font-cinzel text-2xl sm:text-3xl font-bold text-champagne">00</div>
+              <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-royal-light/75 mt-1">Days</div>
+            </div>
+            <div class="bg-royal/90 border border-rose-gold/45 rounded-2xl py-3.5 px-2 shadow-inner">
+              <div id="cd-hours" class="font-cinzel text-2xl sm:text-3xl font-bold text-champagne">00</div>
+              <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-royal-light/75 mt-1">Hours</div>
+            </div>
+            <div class="bg-royal/90 border border-rose-gold/45 rounded-2xl py-3.5 px-2 shadow-inner">
+              <div id="cd-minutes" class="font-cinzel text-2xl sm:text-3xl font-bold text-champagne">00</div>
+              <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-royal-light/75 mt-1">Mins</div>
+            </div>
+            <div class="bg-royal/90 border border-rose-gold/45 rounded-2xl py-3.5 px-2 shadow-inner">
+              <div id="cd-seconds" class="font-cinzel text-2xl sm:text-3xl font-bold text-champagne">00</div>
+              <div class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-royal-light/75 mt-1">Secs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. PARENTS' BLESSINGS & FAMILY INVITATION SECTION
+       ========================================================================== -->
+  <section id="blessings" class="bg-silk islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6 border-b border-rose-gold/35">
+    <div class="max-w-4xl mx-auto text-center reveal-on-scroll">
+      <p class="font-cinzel text-xs uppercase tracking-[0.3em] text-rose-deep font-semibold mb-3">
+        With Grateful Hearts &amp; Seeking Allah’s Blessings
+      </p>
+      <h2 class="font-serif-luxury text-3xl sm:text-5xl font-semibold text-royal-dark mb-5">
+        Solicit Your Gracious Presence
+      </h2>
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-muted-luxury leading-relaxed mb-12">
+        Together with our beloved families, we joyfully invite you and your family to grace the auspicious Nikah ceremony and celebrate the beginning of our lifelong journey together.
+      </p>
+
+      <!-- Two Family Blessing Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        <!-- Groom's Family Card -->
+        <div class="bg-silk-alt border border-rose-gold/60 rounded-3xl p-7 sm:p-9 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-full bg-royal text-champagne flex items-center justify-center mx-auto mb-4 border border-rose-gold">
+            <i class="fa-solid fa-crown text-sm"></i>
+          </div>
+          <p class="font-cinzel text-[11px] uppercase tracking-[0.28em] text-rose-deep font-semibold mb-2">
+            The Groom
+          </p>
+          <h3 class="font-serif-luxury text-3xl font-bold text-royal-dark mb-3">
+            Shaheed Hussain
+          </h3>
+          <p class="text-xs uppercase tracking-[0.2em] text-muted-luxury mb-1">
+            Beloved Son Of
+          </p>
+          <p class="font-serif-luxury text-xl sm:text-2xl font-semibold text-royal-dark">
+            Mr. Mohamed Yunus &amp; Mrs. Doulath Parveen
+          </p>
+        </div>
+
+        <!-- Bride's Family Card -->
+        <div class="bg-silk-alt border border-rose-gold/60 rounded-3xl p-7 sm:p-9 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-full bg-royal text-champagne flex items-center justify-center mx-auto mb-4 border border-rose-gold">
+            <i class="fa-solid fa-gem text-sm"></i>
+          </div>
+          <p class="font-cinzel text-[11px] uppercase tracking-[0.28em] text-rose-deep font-semibold mb-2">
+            The Bride
+          </p>
+          <h3 class="font-serif-luxury text-3xl font-bold text-royal-dark mb-3">
+            Azra
+          </h3>
+          <p class="text-xs uppercase tracking-[0.2em] text-muted-luxury mb-1">
+            Beloved Daughter Of
+          </p>
+          <p class="font-serif-luxury text-xl sm:text-2xl font-semibold text-royal-dark">
+            Mr. Munuvar Basha &amp; Mrs. Shakila Parvin
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. SINGLE CENTERED MARRIAGE / NIKAH CEREMONY CARD
+       ========================================================================== -->
+  <section id="events" class="bg-royal islamic-pattern-overlay text-royal-light py-16 sm:py-24 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto reveal-on-scroll">
+      <div class="text-center mb-12">
+        <p class="font-cinzel text-xs uppercase tracking-[0.32em] text-rose-gold mb-2">
+          Wedding Ceremony
+        </p>
+        <h2 class="font-serif-luxury text-3xl sm:text-5xl font-semibold text-champagne">
+          The Sacred Union
+        </h2>
+        <p class="font-serif-luxury italic text-lg sm:text-xl text-royal-light/85 mt-2">
+          Join us as we solemnize our marriage vows amidst prayers and warm hospitality.
+        </p>
+      </div>
+
+      <!-- Single Centered Marriage Card -->
+      <div class="max-w-xl mx-auto">
+        <div class="bg-royal-card border-2 border-rose-gold rounded-3xl p-7 sm:p-10 shadow-[0_20px_50px_rgba(25,7,13,0.48)] relative">
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <span class="px-4 py-1.5 rounded-full border border-rose-gold/65 bg-royal/85 font-cinzel text-[11px] uppercase tracking-[0.22em] text-champagne">
+              SUNDAY • 11:00 AM ONWARDS
+            </span>
+            <div class="w-11 h-11 rounded-2xl border border-rose-gold/65 bg-royal/85 flex items-center justify-center text-rose-gold">
+              <i class="fa-solid fa-mosque text-base"></i>
+            </div>
+          </div>
+
+          <h3 class="font-serif-luxury text-3xl sm:text-4xl font-semibold text-champagne mb-3">
+            Nikah Ceremony
+          </h3>
+          <p class="font-serif-luxury italic text-lg text-royal-light/90 leading-relaxed mb-7">
+            The solemnization of our sacred marriage vows amidst prayers, rose petals, and joyous hospitality.
+          </p>
+
+          <div class="h-px bg-rose-gold/30 mb-7"></div>
+
+          <!-- Event Details -->
+          <div class="space-y-5 text-sm sm:text-base">
+            <div class="flex items-start gap-4">
+              <i class="fa-regular fa-calendar text-rose-gold mt-1 w-5 text-center"></i>
+              <div>
+                <p class="font-semibold text-royal-light">Sunday, 20th December 2026</p>
+                <p class="text-xs sm:text-sm text-royal-light/80 mt-0.5">11:00 AM Onwards • Followed by Wedding Lunch</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot text-rose-gold mt-1 w-5 text-center"></i>
+              <div>
+                <p class="font-semibold text-royal-light">L. K. S Mahal</p>
+                <p class="text-xs sm:text-sm text-royal-light/80 mt-0.5">Dindigul Road, Trichy - 1</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-shirt text-rose-gold mt-1 w-5 text-center"></i>
+              <div>
+                <p class="font-semibold text-royal-light">Dress Code</p>
+                <p class="text-xs sm:text-sm text-royal-light/80 mt-0.5">Traditional Festive &amp; Regal Attire</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="h-px bg-rose-gold/30 my-7"></div>
+
+          <!-- Action Buttons: Add to Calendar (.ics) & View Map -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <button type="button"
+              onclick="downloadICS('Nikah Ceremony - Shaheed Hussain & Azra', '20261220T110000', '20261220T150000', 'L. K. S Mahal, Dindigul Road, Trichy - 1')"
+              class="rose-gold-foil-btn py-3.5 px-5 rounded-2xl font-cinzel text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 cursor-pointer">
+              <i class="fa-regular fa-calendar-plus"></i>
+              <span>Add to Calendar</span>
+            </button>
+
+            <a href="https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac" target="_blank" rel="noopener noreferrer"
+              class="py-3.5 px-5 rounded-2xl border border-rose-gold/75 bg-royal/85 hover:bg-rose-300/10 text-champagne font-cinzel text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>View Map</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. VENUE & DIRECTIONS SECTION
+       ========================================================================== -->
+  <section id="venue" class="bg-silk islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6 border-b border-rose-gold/35">
+    <div class="max-w-4xl mx-auto reveal-on-scroll">
+      <div class="text-center mb-10">
+        <p class="font-cinzel text-xs uppercase tracking-[0.3em] text-rose-deep font-semibold mb-2">
+          Destination &amp; Hospitality
+        </p>
+        <h2 class="font-serif-luxury text-3xl sm:text-5xl font-semibold text-royal-dark">
+          The Wedding Venue
+        </h2>
+      </div>
+
+      <div class="bg-royal islamic-pattern-overlay text-royal-light rounded-3xl p-7 sm:p-12 border border-rose-gold/65 shadow-2xl text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-rose-gold/55 bg-royal-card/90 text-champagne text-xs font-cinzel tracking-[0.18em] mb-6">
+          <i class="fa-solid fa-compass text-rose-gold"></i>
+          <span>TIRUCHIRAPPALLI • TAMIL NADU</span>
+        </div>
+
+        <h3 id="venue-card-title" class="font-serif-luxury text-3xl sm:text-5xl font-semibold text-champagne mb-3">
+          L. K. S Mahal
+        </h3>
+        <p id="venue-card-address" class="text-sm sm:text-lg text-royal-light/90 max-w-lg mx-auto mb-8">
+          Dindigul Road, Trichy - 1, Tamil Nadu
+        </p>
+
+        <!-- Stylized Architectural Map Illustration -->
+        <div class="max-w-xl mx-auto mb-8 rounded-2xl border border-rose-gold/45 bg-royal-card/90 p-6 relative overflow-hidden">
+          <svg viewBox="0 0 400 130" class="w-full h-28 sm:h-32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 95 Q 130 35, 200 65 T 380 35" stroke="#D9A79C" stroke-width="1.5" stroke-opacity="0.75" />
+            <path d="M35 30 Q 150 85, 260 55 T 370 100" stroke="#F3D9D0" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.45" />
+            <circle cx="200" cy="65" r="22" stroke="#D9A79C" stroke-width="1.2" stroke-opacity="0.6" />
+            <circle cx="200" cy="65" r="11" fill="#D9A79C" fill-opacity="0.25" />
+            <circle cx="200" cy="65" r="5" fill="#F3D9D0" />
+          </svg>
+          <p class="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.25em] text-champagne/85 mt-1">
+            L. K. S Mahal • Dindigul Road, Trichy - 1
+          </p>
+        </div>
+
+        <!-- Map & Copy Address Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+          <a href="https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac" target="_blank" rel="noopener noreferrer"
+            class="w-full sm:w-auto flex-1 rose-gold-foil-btn py-3.5 px-6 rounded-2xl font-cinzel text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-location-arrow"></i>
+            <span>Open in Google Maps</span>
+          </a>
+
+          <button type="button" onclick="copyVenueAddress()"
+            class="w-full sm:w-auto flex-1 py-3.5 px-6 rounded-2xl border border-rose-gold/65 bg-royal-card/85 hover:bg-rose-300/10 text-champagne font-cinzel text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2.5 transition cursor-pointer">
+            <i class="fa-regular fa-copy"></i>
+            <span>Copy Address</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. INTERACTIVE RSVP & LIVE DUA / BLESSINGS WALL
+       ========================================================================== -->
+  <section id="rsvp" class="bg-silk-alt islamic-pattern-light py-16 sm:py-24 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start reveal-on-scroll">
+      
+      <!-- RSVP Confirmation Card -->
+      <div class="bg-silk border border-rose-gold/65 rounded-3xl p-7 sm:p-9 shadow-lg">
+        <p class="font-cinzel text-xs uppercase tracking-[0.28em] text-rose-deep font-semibold mb-2">
+          Kindly Respond
+        </p>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-semibold text-royal-dark mb-2">
+          Confirm Your Presence
+        </h2>
+        <p class="text-xs sm:text-sm text-muted-luxury mb-6">
+          Please let us know if you will be joining us for the Nikah &amp; Wedding Lunch on 20th December 2026.
+        </p>
+
+        <form id="rsvp-form" class="space-y-4">
+          <div>
+            <label for="guest-name" class="block font-cinzel text-[11px] uppercase tracking-[0.18em] text-royal-dark mb-1.5">
+              Full Name *
+            </label>
+            <input type="text" id="guest-name" required placeholder="e.g. Mr. & Mrs. Ahmed"
+              class="w-full px-4 py-3 rounded-xl border border-rose-gold/60 bg-white/95 text-royal-dark text-sm focus:outline-none focus:border-rose-700" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="attendance-status" class="block font-cinzel text-[11px] uppercase tracking-[0.18em] text-royal-dark mb-1.5">
+                Will You Attend?
+              </label>
+              <select id="attendance-status"
+                class="w-full px-4 py-3 rounded-xl border border-rose-gold/60 bg-white/95 text-royal-dark text-sm focus:outline-none focus:border-rose-700">
+                <option value="Joyfully Attending">Joyfully Attending</option>
+                <option value="Sending Duas from Afar">Sending Duas from Afar</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="guest-count" class="block font-cinzel text-[11px] uppercase tracking-[0.18em] text-royal-dark mb-1.5">
+                Number of Guests
+              </label>
+              <select id="guest-count"
+                class="w-full px-4 py-3 rounded-xl border border-rose-gold/60 bg-white/95 text-royal-dark text-sm focus:outline-none focus:border-rose-700">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Family Members</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="rsvp-note" class="block font-cinzel text-[11px] uppercase tracking-[0.18em] text-royal-dark mb-1.5">
+              Message for the Couple (Optional)
+            </label>
+            <textarea id="rsvp-note" rows="2" placeholder="Write a brief note or arrival detail..."
+              class="w-full px-4 py-3 rounded-xl border border-rose-gold/60 bg-white/95 text-royal-dark text-sm focus:outline-none focus:border-rose-700"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full rose-gold-foil-btn py-3.5 px-6 rounded-2xl font-cinzel text-xs uppercase tracking-[0.2em] cursor-pointer">
+            Confirm RSVP
+          </button>
+        </form>
+
+        <!-- Confirmed State Box -->
+        <div id="rsvp-confirmation-box" class="hidden text-center py-6 px-4 rounded-2xl bg-royal text-royal-light border border-rose-gold">
+          <div class="w-12 h-12 rounded-full bg-rose-300/20 border border-rose-gold text-champagne flex items-center justify-center mx-auto mb-3">
+            <i class="fa-solid fa-check text-lg"></i>
+          </div>
+          <h3 class="font-serif-luxury text-2xl text-champagne mb-2">JazakAllah Khair!</h3>
+          <p id="rsvp-confirmation-text" class="text-xs sm:text-sm text-royal-light/90 leading-relaxed mb-5"></p>
+          <button type="button" onclick="resetRSVPForm()"
+            class="text-xs font-cinzel uppercase tracking-[0.18em] text-rose-gold underline cursor-pointer">
+            Update Response
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive Dua & Blessings Wall -->
+      <div id="wishes" class="bg-royal islamic-pattern-overlay text-royal-light border border-rose-gold/65 rounded-3xl p-7 sm:p-9 shadow-xl">
+        <p class="font-cinzel text-xs uppercase tracking-[0.28em] text-rose-gold mb-2">
+          Prayers &amp; Warm Wishes
+        </p>
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl font-semibold text-champagne mb-2">
+          Dua &amp; Blessings Wall
+        </h2>
+        <p class="text-xs sm:text-sm text-royal-light/85 mb-6">
+          Leave a heartfelt dua or blessing for Shaheed Hussain &amp; Azra as they embark on this sacred bond.
+        </p>
+
+        <!-- Post New Dua Form -->
+        <form id="dua-form" class="space-y-3 mb-7 pb-7 border-b border-rose-gold/30">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input type="text" id="dua-author" required placeholder="Your Name *"
+              class="w-full px-4 py-2.5 rounded-xl border border-rose-gold/45 bg-royal-card/90 text-royal-light placeholder-rose-100/50 text-sm focus:outline-none focus:border-rose-gold" />
+            <input type="text" id="dua-relation" placeholder="Relation (e.g. Family, Friend)"
+              class="w-full px-4 py-2.5 rounded-xl border border-rose-gold/45 bg-royal-card/90 text-royal-light placeholder-rose-100/50 text-sm focus:outline-none focus:border-rose-gold" />
+          </div>
+          <textarea id="dua-message" rows="2" required placeholder="Write your dua or blessing..."
+            class="w-full px-4 py-2.5 rounded-xl border border-rose-gold/45 bg-royal-card/90 text-royal-light placeholder-rose-100/50 text-sm focus:outline-none focus:border-rose-gold"></textarea>
+          <button type="submit"
+            class="rose-gold-foil-btn py-2.5 px-5 rounded-xl font-cinzel text-xs uppercase tracking-[0.18em] cursor-pointer">
+            Post Blessing
+          </button>
+        </form>
+
+        <!-- Blessings Feed -->
+        <div id="dua-cards-container" class="space-y-3.5 max-h-80 overflow-y-auto pr-1"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. CLOSING FOOTER
+       ========================================================================== -->
+  <footer class="bg-royal islamic-pattern-overlay text-royal-light py-14 px-4 text-center border-t border-rose-gold/45">
+    <div class="max-w-xl mx-auto">
+      <div class="w-16 h-16 rounded-full border-2 border-rose-gold flex items-center justify-center mx-auto mb-5 font-cinzel text-lg font-bold text-champagne">
+        S &amp; A
+      </div>
+      <p class="font-arabic text-2xl text-champagne mb-2">
+        بَارَكَ اللهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+      </p>
+      <p class="font-serif-luxury italic text-base text-royal-light/85 mb-6">
+        “May Allah bless you both, shower His blessings upon you, and unite you together in goodness.”
+      </p>
+      <p class="font-cinzel text-xs uppercase tracking-[0.25em] text-rose-gold">
+        With love &amp; prayers, Families of Shaheed Hussain &amp; Azra
+      </p>
+      <p class="text-[11px] text-royal-light/65 mt-2">
+        Sunday, 20th December 2026 • L. K. S Mahal, Dindigul Road, Trichy - 1
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: CURTAIN REVEAL, COUNTDOWN, AUDIO CHIMES, ICS, RSVP & DUA WALL
+       ========================================================================== -->
+  <script>
+    // 1. Toast Notification Helper
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      toast.classList.remove('opacity-0', '-translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-4');
+      }, 3400);
+    }
+
+    // 2. Web Audio API Gentle Ambient Royal Chimes
+    let audioCtx = null;
+    let isMusicPlaying = false;
+    let chimeInterval = null;
+
+    function playWarmChord() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      const frequencies = [293.66, 369.99, 440.00, 587.33, 659.25];
+      frequencies.forEach((freq, idx) => {
+        setTimeout(() => {
+          if (!isMusicPlaying) return;
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+          gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.025, audioCtx.currentTime + 0.15);
+          gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.8);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 2.9);
+        }, idx * 240);
+      });
+    }
+
+    function toggleAmbientMusic(forceStart = false) {
+      const icon = document.getElementById('music-icon');
+      if (forceStart && isMusicPlaying) return;
+
+      isMusicPlaying = forceStart ? true : !isMusicPlaying;
+      if (isMusicPlaying) {
+        icon.className = 'fa-solid fa-volume-high text-sm text-champagne';
+        playWarmChord();
+        chimeInterval = setInterval(playWarmChord, 5200);
+        if (!forceStart) showToast('Ambient royal chimes enabled');
+      } else {
+        icon.className = 'fa-solid fa-volume-xmark text-sm';
+        clearInterval(chimeInterval);
+        showToast('Ambient chimes muted');
+      }
+    }
+
+    document.getElementById('ambient-music-btn').addEventListener('click', () => toggleAmbientMusic());
+
+    // 3. Royal Curtain & Wax Seal Reveal
+    const envelopeOverlay = document.getElementById('envelope-overlay');
+    const openInviteBtn = document.getElementById('open-invite-btn');
+
+    openInviteBtn.addEventListener('click', () => {
+      envelopeOverlay.classList.add('opened');
+      toggleAmbientMusic(true);
+      setTimeout(() => {
+        envelopeOverlay.style.visibility = 'hidden';
+        envelopeOverlay.style.opacity = '0';
+      }, 1150);
+    });
+
+    // 4. Live Countdown Timer to Sunday, December 20, 2026 at 11:00:00 AM IST (+05:30)
+    const targetWeddingDate = new Date('2026-12-20T11:00:00+05:30').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetWeddingDate - now;
+
+      if (distance <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-minutes').textContent = '00';
+        document.getElementById('cd-seconds').textContent = '00';
+        return
